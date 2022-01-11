@@ -1,2 +1,2 @@
 # Small-Projects
-Random Projects created
+Random Projects created based on inspiration from coding examples.
