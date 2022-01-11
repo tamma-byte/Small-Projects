@@ -1,0 +1,78 @@
+<!--Modified CreatTextNode Exercise-->
+<!--https://developer.mozilla.org/en-US/docs/Web/API/Document/createTextNode-->
+
+<!--Created by MT on 12/01/2022-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <head>
+        <title>The Aussie Chant</title>
+        <script>
+            function aussieChant(shout){
+                var newShout = document.createTextNode(shout),
+                chant = document.getElementById('chant');
+    
+                chant.appendChild(newShout);
+            }
+        </script>
+
+<style>
+    body{
+        background-color: rgb(62, 163, 245);
+        background-image: url('https://www.newidea.com.au/media/65379/australian-flag.jpg?width=909&height=0&mode=crop&center=0.5,0.5');
+        background-size: cover;
+    }
+
+    hr{
+        height: 5px;
+        color: white;
+        background-color: white;
+        border: 0 none;
+    }
+
+    p{
+        position: relative;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        color: white;
+        font-size: 48px;
+    }
+
+    .box{
+        background-color: rgb(125, 160, 224);
+        border-radius: 5px;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        text-align: center;
+        line-height: 1;
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        max-width: 50%;
+        max-height: 50%;
+        margin-left: 25%;
+        padding: 20px 40px 20px 40px;
+        opacity: 0.8;
+    }
+
+    .button{
+        margin: 10px;
+        position: relative;
+        left: 50%;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+</style>
+    </head>
+
+    <body>
+
+        <button class="button" onclick="aussieChant('AUSSIE! ');">AUSSIE!</button>
+        <button class="button" onclick="aussieChant('OI! ');">OI!</button>
+
+        <hr />
+        <div class="box">
+            <p>Make an Aussie Chant: </p>
+            <p id='chant'></p>
+        </div>
+ 
+    </body>
+</html>
